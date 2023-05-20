@@ -1,2 +1,1 @@
-export * from './Transfer'
-export * from './Wallet'
+export * from './Prover'

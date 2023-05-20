@@ -1,8 +1,7 @@
 import server from "./server";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { WalletProps } from "./Wallet";
 
-export function Prover({ address, setAddress, balance, setBalance }: WalletProps) {
+export function Prover() {
   const [name, setName] = useState("");
   const [proof, setProof] = useState("");
   const [validProof, setValidProof] = useState(true)
