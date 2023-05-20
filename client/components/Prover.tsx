@@ -1,15 +1,13 @@
 import server from "./server";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-const niceList = require('../utils/niceList.json');
-const MerkleTree = require('../utils/MerkleTree');
+import niceList from '../../utils/niceList.json';
+import MerkleTree from '../../utils/MerkleTree';
 
 export function Prover() {
   const [name, setName] = useState("");
-  const [proof, setProof] = useState("");
-  const [validProof, setValidProof] = useState(true)
 
   async function sendProof() {
-    const { data: gift } = await axios.post(`${serverUrl}/gift`, {
+    const { data: gift } = await server.post(`/gift`, {
       // TODO: add request body parameters here!
     });
 
@@ -28,15 +26,6 @@ export function Prover() {
           onChange={(e) => setName(e.target.value)}
         ></input>
       </label>
-      <label>
-        Proof
-        <input
-          placeholder="['some hash 1', 'some hash 2', ...]"
-          value={proof}
-          onChange={(e) => setProof(e.target.value)}
-        ></input>
-      </label>
-      {validProof ? "" : <p>That is not a valid proof</p>}
       <input type="submit" className="button" value="prove" />
     </form>
   );
