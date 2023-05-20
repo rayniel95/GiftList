@@ -4,8 +4,8 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-    basePath: '/ecdsa-node',
-    assetPrefix:'/ecdsa-node/',
+    basePath: '/GiftList',
+    assetPrefix:'/GiftList/',
     experimental: {
         appDir: true,
     },
