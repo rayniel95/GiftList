@@ -1,5 +1,7 @@
 import server from "./server";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+const niceList = require('../utils/niceList.json');
+const MerkleTree = require('../utils/MerkleTree');
 
 export function Prover() {
   const [name, setName] = useState("");
@@ -7,12 +9,11 @@ export function Prover() {
   const [validProof, setValidProof] = useState(true)
 
   async function sendProof() {
-    // if (validPublickKey(address)) {
-    //   const {
-    //     data: { balance },
-    //   } = await server.get(`balance/${address}`);
-    //   setBalance(balance);
-    // }
+    const { data: gift } = await axios.post(`${serverUrl}/gift`, {
+      // TODO: add request body parameters here!
+    });
+
+    console.log({ gift });
   }
 
   return (
@@ -35,7 +36,7 @@ export function Prover() {
           onChange={(e) => setProof(e.target.value)}
         ></input>
       </label>
-      {validProof ? "":<p>That is not a valid proof</p>}
+      {validProof ? "" : <p>That is not a valid proof</p>}
       <input type="submit" className="button" value="prove" />
     </form>
   );
