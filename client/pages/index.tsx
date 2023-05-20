@@ -16,12 +16,6 @@ export default function Home() {
 
       </div>
       <div className="app">
-        <Wallet
-          balance={balance}
-          setBalance={setBalance}
-          address={address}
-          setAddress={setAddress}
-        />
         <Transfer setBalance={setBalance} address={address} />
       </div>
     </>
