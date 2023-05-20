@@ -5,12 +5,13 @@ import MerkleTree from '../../utils/MerkleTree';
 
 export function Prover() {
   const [name, setName] = useState("");
+  const [gift, setGift] = useState("");
 
   async function sendProof() {
     const { data: gift } = await server.post(`/gift`, {
       // TODO: add request body parameters here!
     });
-
+    setGift(gift)
     console.log({ gift });
   }
 
@@ -26,6 +27,9 @@ export function Prover() {
           onChange={(e) => setName(e.target.value)}
         ></input>
       </label>
+      <p>
+        Your gift is: {gift}
+      </p>
       <input type="submit" className="button" value="prove" />
     </form>
   );
