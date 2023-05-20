@@ -3,13 +3,19 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import niceList from '../../utils/niceList.json';
 import MerkleTree from '../../utils/MerkleTree';
 
+const merkleTree = new MerkleTree(niceList);
+
 export function Prover() {
   const [name, setName] = useState("");
   const [gift, setGift] = useState("");
 
   async function sendProof() {
+    const index = niceList.findIndex(n => n === name);
+    const proof = merkleTree.getProof(index);
+    
     const { data: gift } = await server.post(`/gift`, {
-      // TODO: add request body parameters here!
+      name,
+      proof
     });
     setGift(gift)
     console.log({ gift });
