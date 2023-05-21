@@ -10,10 +10,12 @@ export function Prover() {
   const [name, setName] = useState("");
   const [giftName, setGiftName] = useState("");
 
-  async function sendProof() {
+  async function sendProof(event: { preventDefault: () => void; }) {
+    event.preventDefault();
+
     const index = niceList.findIndex(n => n === name);
     const proof = merkleTree.getProof(index);
-    
+
     const { data: gift } = await server.post(`/gift`, {
       name,
       proof
