@@ -8,7 +8,7 @@ const merkleTree = new MerkleTree(niceList);
 
 export function Prover() {
   const [name, setName] = useState("");
-  const [gift, setGift] = useState("");
+  const [giftName, setGiftName] = useState("");
 
   async function sendProof() {
     const index = niceList.findIndex(n => n === name);
@@ -18,8 +18,8 @@ export function Prover() {
       name,
       proof
     });
-    setGift(gift)
-    console.log({ gift });
+    setGiftName(gift)
+    console.log(gift);
   }
 
   return (
@@ -35,7 +35,7 @@ export function Prover() {
         ></input>
       </label>
       <p>
-        Your gift is: {gift}
+        Your gift is: {giftName}
       </p>
       <input type="submit" className="button" value="prove" />
     </form>
