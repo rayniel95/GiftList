@@ -1,7 +1,7 @@
 import server from "./server";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import niceList from '../../utils/niceList.json';
-import MerkleTree from '../../utils/MerkleTree';
+import niceList from '../utils/niceList.json';
+import MerkleTree from '../utils/MerkleTree';
 
 const merkleTree = new MerkleTree(niceList);
 
