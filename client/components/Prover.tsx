@@ -3,6 +3,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import niceList from '../utils/niceList.json';
 import MerkleTree from '../utils/MerkleTree';
 
+
 const merkleTree = new MerkleTree(niceList);
 
 export function Prover() {
