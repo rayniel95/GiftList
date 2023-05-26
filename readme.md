@@ -12,7 +12,7 @@ The **client** is the **prover** here. They are the ones trying to prove to 
 ## Hot to execute
 ### Steps to create the Nextjs client
 
-1. Go to https://rayniel95.github.io/ecdsa-node/
+1. Go to https://rayniel95.github.io/GiftList/
 
 ### Steps to create the node server
 
@@ -27,10 +27,11 @@ The **client** is the **prover** here. They are the ones trying to prove to 
 ![](diagram.svg)
 ### Demo
 
-See it on Youtube
+Watch the demo in on Youtube
+
+Watch the code explanation in on Youtube
 
 ### TODO
 - [ ] add golang server
 - [ ] add rust server
-- [ ] add sign the message using custom private key on frontend
 - [ ] add a demo
