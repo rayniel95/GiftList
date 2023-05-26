@@ -1,9 +1,9 @@
 # About
-## ECDSA Node
+## GiftList
 
-This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
+This project is an application which gives out gifts, but only to names [on the list](https://github.com/ChainShot/GiftList/blob/main/utils/niceList.json). The catch is that on the server you are only allowed to store one **32 byte value** in the server memory. This 32 byte value has to be enough for the server to be able to determine who is [on the list](https://github.com/ChainShot/GiftList/blob/main/server/index.js#L10).
 
-However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
+The **client** is the **prover** here. They are the ones trying to prove to the server that the one name is in the list. Likewise think of the **server** as the **verifier** here. They are taking the client's proof and, using minimal information, able to verify that the name sent from the client is actually in the list.
 
 ## Requirements
 
