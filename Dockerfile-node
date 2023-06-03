@@ -10,5 +10,5 @@ COPY server-node ./
 #TODO - compile and copy the compiled code
 RUN yarn build
 # COPY ./server-node/dist .
-EXPOSE 3042
+EXPOSE 1225
 CMD [ "node", "dist/index.js" ]

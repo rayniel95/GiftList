@@ -20,7 +20,7 @@ The **client** is the **prover** here. They are the ones trying to prove to 
 2. Download the project
 3. Open a terminal in the project folder
 4. Build the image, execute: `docker build ./ -f Dockerfile-node -t server-node`
-5. Run the container, execute: `docker run -it -p 3042:3042 server-node`
+5. Run the container, execute: `docker run -it -p 1225:1225 server-node`
 
 ## How it works
 
