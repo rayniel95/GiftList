@@ -27,7 +27,7 @@ The **client** is the **prover** here. They are the ones trying to prove to 
 ![](diagram.svg)
 ### Demo
 
-Watch the demo in on Youtube
+[Watch the demo in Youtube](https://youtu.be/7YLYQ4dOur0)
 
 Watch the code explanation in on Youtube
 
